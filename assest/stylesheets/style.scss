@@ -28,7 +28,8 @@ body{
         font-weight: 600;
     }
     &.feed1,
-    &.feed2{
+    &.feed2,
+    &.feed3{
         &>div,
         &>h1{
             width:33.3333%;
@@ -138,6 +139,13 @@ body{
         &.active{
             background-position: -240px -269px;
         }
+    }
+    &.arrow-right{
+        width:20px;
+        height:20px;
+        background-size: 410px 396px;
+        background-position: -365px -121px;
+        cursor: pointer;
     }
     &.close{
         width:20px;

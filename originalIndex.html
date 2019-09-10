@@ -6,6 +6,7 @@
     <title>SWTT DEMO APP</title> 
     <link rel="pwa-setup" href="/manifest.json"> 
     <link rel="stylesheet" href="./assest/stylesheets/style.scss">
+    <link rel="stylesheet" href="./assest/stylesheets/feed3.scss">
   </head>
   <body> 
     <header class="header home">
@@ -16,10 +17,7 @@
     
     <header class="header feed1 hide">
         <div onclick="home()"> キャンセル</div>
-        <div>
-          <h1>すべての写真</h1>
-          <div class="instargram-icon bottom-arrow"></div>
-        </div>
+        <h1>すべての写真</h1>
         <div class="next-text" onclick="moveFeed2()"> 次へ</div>
     </header>
     <header class="header feed2 hide">
@@ -27,7 +25,14 @@
           <div class="instagram-icon close"></div>
         </div>
         <h1>新しい写真投稿</h1>
-        <div class="next-text"> 次へ</div>
+        <div class="next-text" onclick="moveFeed3()">次へ</div>
+    </header>
+    <header class="header feed3 hide">
+        <div>
+          <div class="instagram-icon close"></div>
+        </div>
+        <h1>新規投稿</h1>
+        <div class="next-text">シェア</div>
     </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
@@ -167,6 +172,46 @@
           <div class="feed-nav__text">フィルター</div>
           <div class="feed-nav__text">編集</div>
         </div>
+      </div>
+      <div class="page-container feed-page3 hide">
+        <div class="form-wrapper">
+          <img src="./assest/images/feed-main-image1.png" class="feed-image active">
+          <textarea type="text" placeholder="キャプションを書く" onclick="keyboardAnimation()"></textarea>
+        </div>
+        <div class="menu-warpper top-border">
+          <div class="menu-warpper__text">タグ付けする</div>
+          <div class="instagram-icon arrow-right"></div>
+        </div>
+        <div class="menu-warpper top-border">
+          <div class="menu-warpper__text">位置情報を追加</div>
+          <div class="instagram-icon arrow-right"></div>
+        </div>
+        <div class="menu-warpper top-border">
+          <div class="menu-warpper__text">Facebook</div>
+          <img src="./assest/images/toggle-button.png" class="">
+        </div>
+        <div class="menu-warpper">
+          <div class="menu-warpper__text">Twitter</div>
+          <img src="./assest/images/toggle-button.png" class="">
+        </div>
+        <div class="menu-warpper">
+          <div class="menu-warpper__text">Tumblr</div>
+          <img src="./assest/images/toggle-button.png" class="">
+        </div>
+        <div class="menu-warpper">
+          <div class="menu-warpper__text">Ameba</div>
+          <img src="./assest/images/toggle-button.png" class="">
+        </div>
+        <div class="menu-warpper">
+          <div class="menu-warpper__text">ミクシィ</div>
+          <img src="./assest/images/toggle-button.png" class="">
+        </div>
+        <div class="menu-warpper top-border">
+          <div class="menu-warpper__text detail">詳細設定
+            <div class="instagram-icon arrow-right"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <footer class="footer">
         <div class="instagram-icon home active" onclick="home()"></div>
