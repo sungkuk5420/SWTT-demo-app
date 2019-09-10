@@ -119,15 +119,41 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"manifest.json":[function(require,module,exports) {
 module.exports = {
-  "name": "ToDoApp",
-  "short_name": "ToDo",
-  "theme_color": "#2196f3",
-  "background_color": "#2196f3",
+  "name": "SWTT DEMO",
+  "short_name": "SWTT",
+  "start_url": ".",
   "display": "standalone",
-  "start_url": "/",
-  "scope": "/",
-  "icons": [],
-  "splash_pages": null
+  "background_color": "#fff",
+  "description": "A simply readable Hacker News app.",
+  "icons": [{
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "./assest/images/swtt-icon.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "related_applications": [{
+    "platform": "play",
+    "url": "https://play.google.com/store/apps/details?id=cheeaun.SWTT DEMO"
+  }]
 };
 },{}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -157,7 +183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59653" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63290" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
