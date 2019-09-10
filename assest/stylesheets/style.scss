@@ -14,7 +14,7 @@ body{
     border-bottom:1px solid rgba(0,0,0,.0975);
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 100vw;
     background: white;
     box-sizing: border-box;
 }
@@ -111,6 +111,7 @@ body{
     height: 82px;
     padding: 10px 8px;
     border-bottom: 1px solid #e6e6e6;
+    overflow-x: auto; 
     &__item{
         width: 72px;
         height: 100%;
@@ -159,7 +160,7 @@ body{
     }
     &__content{
         padding: 0 0 0 15px;
-        width: 100%;
+        width: 100vw;
         &__name{
             color: #262626;
             font-weight:600;
@@ -173,7 +174,7 @@ body{
 }
 
 .main-image{
-    width: 100%;
+    width: 100vw;
 }
 
 .icons-warpper{
@@ -210,7 +211,7 @@ body{
     position: fixed;
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 100vw;
     height: 44px;
     flex: none;
     position: fixed;
