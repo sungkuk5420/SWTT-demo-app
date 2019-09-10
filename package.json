@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sungkuk5420/SWTT-demo-app#readme",
   "devDependencies": {
+    "parcel-plugin-sw-precache": "^1.1.1",
     "postcss-custom-properties": "^9.0.2",
     "sass": "^1.23.0-module.beta.1"
   },
