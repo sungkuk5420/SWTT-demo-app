@@ -50,3 +50,8 @@ npm run build
 ```
 npm i postcss-modules autoprefixer 
 ```
+
+### heroku node app
+```
+node-static
+```
