@@ -17,11 +17,38 @@ body{
     width: 100vw;
     background: white;
     box-sizing: border-box;
+    h1{
+        color: #262626;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .next-text{
+        color: #3897f0;
+        font-size: 16px;
+        font-weight: 600;
+    }
+    &.feed1,
+    &.feed2{
+        &>div,
+        &>h1{
+            width:33.3333%;
+            text-align: center;
+            &:first-child{
+                text-align: start;
+            }
+            &:last-child{
+                text-align: end;
+            }
+        }
+    }
 }
 
 .page-container{
     padding-top: 44px;
     padding-bottom: 100px;
+    &.feed-page1{
+        padding-bottom: 44px;
+    }
 }
 
 .instagram-icon{
@@ -109,6 +136,13 @@ body{
             background-position: -240px -269px;
         }
     }
+    &.close{
+        width:20px;
+        height:20px;
+        background-size: 410px 396px;
+        background-position: -365px -371px;
+        cursor: pointer;
+    }
 }
 
 .stories-wrapper{
@@ -180,9 +214,27 @@ body{
     }
 }
 
-.main-image,
-.main-image2{
+.main-image1,
+.main-image2,
+.feed-main-image1{
     width: 100vw;
+}
+
+.feed-float-icon{
+    width:30px;
+    height:30px;
+    background-size: 89px 89px;
+    background-position: -59px 0;
+    background-image: url(/assest/images/instagram-icon2.png);
+    position: absolute;
+    z-index: 1;
+    margin-top: -40px;
+    margin-left: 10px;
+    &2{
+        @extend .feed-float-icon;
+        right: 10px;
+        background-position: 0 -59px;
+    }
 }
 
 .icons-warpper{
@@ -258,4 +310,28 @@ body{
 a{
     color: #003569;
     text-decoration: none;
+}
+.feed-images-warpper{
+    display: flex;
+    .feed-image{
+        width: calc(25vw - 2px);
+        height: 25vw;
+        border: 1px solid white;
+        &.active{
+            opacity: 0.6;
+        }
+    }
+}
+
+.feed-nav{
+    display: flex;
+    .feed-nav__text{
+        width:33.3333%;
+        display: flex;
+        justify-content: center;
+        padding: 7px;
+        &.active{
+            font-weight: 600;
+        }
+    }
 }

@@ -8,10 +8,24 @@
     <link rel="stylesheet" href="./assest/stylesheets/style.scss">
   </head>
   <body> 
-    <header class="header">
+    <header class="header home">
         <div class="instagram-icon camera"></div>
         <div class="instagram-icon logo"></div>
         <div class="instagram-icon message"></div>
+    </header>
+    
+    <header class="header feed1 hide">
+        <div onclick="home()"> キャンセル</div>
+        <div>
+          <h1>すべての写真</h1>
+          <div class="instargram-icon bottom-arrow"></div>
+        </div>
+        <div class="next-text" onclick="moveFeed2()"> 次へ</div>
+    </header>
+    <header class="header feed2 hide">
+        <div class="instagram-icon close"></div>
+        <h1>新しい写真投稿</h1>
+        <div class="next-text"> 次へ</div>
     </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
@@ -68,7 +82,7 @@
           </div>
           <div class="instagram-icon ten-menu"></div>
         </div>
-        <img src="./assest/images/main-image.jpg" class="main-image">
+        <img src="./assest/images/main-image.jpg" class="main-image1">
         <img src="./assest/images/main-image2.jpg" class="main-image2 hide">
         <div class="image-slider-nav hide">
           <div class="ten active"></div>
@@ -89,10 +103,39 @@
         </div>
         <div class="content-text">カスタムオーダーで作る、自分だけの至高のシャツCustom Shirt Order Fair</div>
     </div>
+    <div class="page-container feed-page1 hide">
+        <img src="./assest/images/feed-main-image1.png" class="feed-main-image1">
+          <div class="feed-float-icon"></div>
+          <div class="feed-float-icon2"></div>
+        </img>
+        <div class="feed-images-warpper">
+            <img src="./assest/images/feed-main-image1.png" class="feed-image active">
+            <img src="./assest/images/feed-image-1.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-3.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-4.jpg" class="feed-image">
+        </div>
+        <div class="feed-images-warpper">
+            <img src="./assest/images/feed-image-5.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-6.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-7.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-8.jpg" class="feed-image">
+        </div>
+        <div class="feed-images-warpper">
+            <img src="./assest/images/feed-image-9.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-10.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-11.jpg" class="feed-image">
+            <img src="./assest/images/feed-image-12.jpg" class="feed-image">
+        </div>
+        <div class="feed-nav">
+          <div class="feed-nav__text active">ライブラリ</div>
+          <div class="feed-nav__text">写真</div>
+          <div class="feed-nav__text">動画</div>
+        </div>
+    </div>
     <footer class="footer">
         <div class="instagram-icon home active" onclick="home()"></div>
         <div class="instagram-icon search"></div>
-        <div class="instagram-icon plus" ></div>
+        <div class="instagram-icon plus" onclick="writeFeed()"></div>
         <div class="instagram-icon like"></div>
         <div class="instagram-icon person" onclick="brand()"></div>
     </footer>

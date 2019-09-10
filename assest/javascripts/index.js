@@ -1,6 +1,9 @@
-const header = document.querySelector('.header');
+const homeHeader = document.querySelector('.header.home');
+const feedHeader1 = document.querySelector('.header.feed1');
+const feedHeader2 = document.querySelector('.header.feed2');
 const mainPage = document.querySelector('.page-container.main-page');
-const mainImage = document.querySelector('.page-container.main-page .main-image');
+const feedPage1 = document.querySelector('.page-container.feed-page1');
+const mainImage1 = document.querySelector('.page-container.main-page .main-image1');
 const mainImage2 = document.querySelector('.main-image2');
 const imageSliderNav = document.querySelector('.image-slider-nav');
 const contentName = document.querySelector('.store-info__content__name2');
@@ -13,7 +16,10 @@ window.home = () => {
 }
 window.brand = () => {
     //change main image
-    mainImage.classList.add('hide');
+    if(mainPage.classList.contains('hide')){
+        return false;
+    }
+    mainImage1.classList.add('hide');
     mainImage2.classList.remove('hide');
     imageSliderNav.classList.remove('hide');
 
@@ -25,4 +31,22 @@ window.brand = () => {
     footer.querySelector('.active').classList.remove('active');
     footer.querySelector('.person').classList.add('active');
     document.body.scrollTop = 0;
+}
+
+window.writeFeed = () => {
+    if(mainPage.classList.contains('hide')){
+        return false;
+    }
+    homeHeader.classList.add('hide');
+    feedHeader1.classList.remove('hide');
+    mainPage.classList.add('hide');
+    feedPage1.classList.remove('hide');
+
+    footer.querySelector('.active').classList.remove('active');
+}
+
+window.moveFeed2 = () => {
+    feedPage1.classList.add('hide');
+    feedHeader1.classList.add('hide');
+    feedHeader2.classList.remove('hide');
 }
