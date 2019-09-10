@@ -4,8 +4,8 @@
   "description": "### parcel 追加 ``` npm install -g parcel-bundler ```",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel originalIndex.html",
+    "build": "parcel build originalIndex.html"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/sungkuk5420/SWTT-demo-app#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "parcel-plugin-sw-precache": "^1.1.1",
     "postcss-custom-properties": "^9.0.2",
     "sass": "^1.23.0-module.beta.1"
