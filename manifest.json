@@ -1,0 +1,11 @@
+{
+  "name": "ToDoApp",
+  "short_name": "ToDo",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [],
+  "splash_pages": null
+}
