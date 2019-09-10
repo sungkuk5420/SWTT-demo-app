@@ -3,6 +3,7 @@ const feedHeader1 = document.querySelector('.header.feed1');
 const feedHeader2 = document.querySelector('.header.feed2');
 const mainPage = document.querySelector('.page-container.main-page');
 const feedPage1 = document.querySelector('.page-container.feed-page1');
+const feedPage2 = document.querySelector('.page-container.feed-page2');
 const mainImage1 = document.querySelector('.page-container.main-page .main-image1');
 const mainImage2 = document.querySelector('.main-image2');
 const imageSliderNav = document.querySelector('.image-slider-nav');
@@ -47,6 +48,7 @@ window.writeFeed = () => {
 
 window.moveFeed2 = () => {
     feedPage1.classList.add('hide');
+    feedPage2.classList.remove('hide');
     feedHeader1.classList.add('hide');
     feedHeader2.classList.remove('hide');
 }
