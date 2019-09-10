@@ -44,3 +44,9 @@ npm run dev
 or
 npm run build
 ```
+
+### autoprefixer
+
+```
+npm i postcss-modules autoprefixer 
+```

@@ -19,6 +19,11 @@
   },
   "homepage": "https://github.com/sungkuk5420/SWTT-demo-app#readme",
   "devDependencies": {
+    "postcss-custom-properties": "^9.0.2",
     "sass": "^1.23.0-module.beta.1"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "postcss-modules": "^1.4.1"
   }
 }
