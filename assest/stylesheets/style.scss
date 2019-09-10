@@ -108,10 +108,11 @@ body{
 .stories-wrapper{
     display: flex;
     width: 100vw;
-    height: 82px;
+    height: 105px;
     padding: 10px 8px;
     border-bottom: 1px solid #e6e6e6;
     overflow-x: auto; 
+    box-sizing: border-box;
     &__item{
         width: 72px;
         height: 100%;
