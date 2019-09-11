@@ -4,11 +4,15 @@ const feedHeader1 = document.querySelector('.header.feed1');
 const feedHeader2 = document.querySelector('.header.feed2');
 const feedHeader3 = document.querySelector('.header.feed3');
 
+const activityHeader = document.querySelector('.header.activity');
+
 const mainPage = document.querySelector('.page-container.main-page');
 
 const feedPage1 = document.querySelector('.page-container.feed-page1');
 const feedPage2 = document.querySelector('.page-container.feed-page2');
 const feedPage3 = document.querySelector('.page-container.feed-page3');
+
+const activityPage = document.querySelector('.page-container.activity-page');
 
 const mainImage1 = document.querySelector('.main-image1');
 const mainImage2 = document.querySelector('.main-image2');
@@ -79,6 +83,7 @@ window.moveFeed3 = () => {
 
 window.animationKey = false;
 window.keyboardAnimation = () => {
+    event.preventDefault();
     if(animationKey){
         return false;
     }
@@ -131,5 +136,14 @@ window.share = () => {
 window.showTooltip = () =>{
     if(event.target.classList.contains('like')){
         event.target.querySelector('.tooltip').classList.toggle('hide');
+    }else{
+        activity();
     }
+}
+
+window.activity = () => {
+    homeHeader.classList.add('hide');
+    activityHeader.classList.remove('hide');
+    mainPage.classList.add('hide');
+    activityPage.classList.remove('hide');
 }

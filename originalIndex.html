@@ -34,6 +34,9 @@
         <h1>新規投稿</h1>
         <div class="next-text" onclick="share()">シェア</div>
     </header>
+    <header class="header activity hide">
+        <h1>アクティビティ</h1>
+    </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
           <div class="stories-wrapper__item">
@@ -196,46 +199,69 @@
           <div class="feed-nav__text">フィルター</div>
           <div class="feed-nav__text">編集</div>
         </div>
+    </div>
+    <div class="page-container feed-page3 hide">
+      <div class="form-wrapper">
+        <img src="./assest/images/feed-main-image1.png" class="feed-image active">
+        <textarea type="text" placeholder="キャプションを書く" onkeydown="keyboardAnimation()"></textarea>
       </div>
-      <div class="page-container feed-page3 hide">
-        <div class="form-wrapper">
-          <img src="./assest/images/feed-main-image1.png" class="feed-image active">
-          <textarea type="text" placeholder="キャプションを書く" onkeyup="keyboardAnimation()"></textarea>
-        </div>
-        <div class="menu-warpper top-border">
-          <div class="menu-warpper__text">タグ付けする</div>
+      <div class="menu-warpper top-border">
+        <div class="menu-warpper__text">タグ付けする</div>
+        <div class="instagram-icon arrow-right"></div>
+      </div>
+      <div class="menu-warpper top-border">
+        <div class="menu-warpper__text">位置情報を追加</div>
+        <div class="instagram-icon arrow-right"></div>
+      </div>
+      <div class="menu-warpper top-border">
+        <div class="menu-warpper__text">Facebook</div>
+        <img src="./assest/images/toggle-button.png" class="">
+      </div>
+      <div class="menu-warpper">
+        <div class="menu-warpper__text">Twitter</div>
+        <img src="./assest/images/toggle-button.png" class="">
+      </div>
+      <div class="menu-warpper">
+        <div class="menu-warpper__text">Tumblr</div>
+        <img src="./assest/images/toggle-button.png" class="">
+      </div>
+      <div class="menu-warpper">
+        <div class="menu-warpper__text">Ameba</div>
+        <img src="./assest/images/toggle-button.png" class="">
+      </div>
+      <div class="menu-warpper">
+        <div class="menu-warpper__text">ミクシィ</div>
+        <img src="./assest/images/toggle-button.png" class="">
+      </div>
+      <div class="menu-warpper top-border">
+        <div class="menu-warpper__text detail">
+          詳細設定
           <div class="instagram-icon arrow-right"></div>
         </div>
-        <div class="menu-warpper top-border">
-          <div class="menu-warpper__text">位置情報を追加</div>
-          <div class="instagram-icon arrow-right"></div>
-        </div>
-        <div class="menu-warpper top-border">
-          <div class="menu-warpper__text">Facebook</div>
-          <img src="./assest/images/toggle-button.png" class="">
-        </div>
-        <div class="menu-warpper">
-          <div class="menu-warpper__text">Twitter</div>
-          <img src="./assest/images/toggle-button.png" class="">
-        </div>
-        <div class="menu-warpper">
-          <div class="menu-warpper__text">Tumblr</div>
-          <img src="./assest/images/toggle-button.png" class="">
-        </div>
-        <div class="menu-warpper">
-          <div class="menu-warpper__text">Ameba</div>
-          <img src="./assest/images/toggle-button.png" class="">
-        </div>
-        <div class="menu-warpper">
-          <div class="menu-warpper__text">ミクシィ</div>
-          <img src="./assest/images/toggle-button.png" class="">
-        </div>
-        <div class="menu-warpper top-border">
-          <div class="menu-warpper__text detail">詳細設定
-            <div class="instagram-icon arrow-right"></div>
-          </div>
-        </div>
       </div>
+    </div>
+    
+    <div class="page-container actifity-page">
+        <div class="person-label">
+          new
+        </div>
+        <div class="person-info">
+          <img class="person-info__image" src="./assest/images/story-0.jpg" alt="">
+          <div class="person-info__content">
+              <span class="person-info__content__name">
+                  isetanmens
+              </span>
+              <span class="person-info__content__name2">
+                  さんがコメントしました。お買い上げありがとうございます。2着目以降はオンラインだけで購入できるので、ぜひご利用ください。
+              </span>
+            </div>
+            <img class="person-info__image2" src="./assest/images/feed-main-image1.png" alt="">
+        </div>
+        
+        <div class="person-label">
+          今日
+        </div>
+        <img src="./assest/images/activity.png" class="main-image1">
     </div>
     <footer class="footer">
         <div class="instagram-icon home active" onclick="home()"></div>
