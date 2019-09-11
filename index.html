@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SWTT DEMO APP</title>
     <link rel="pwa-setup" href="./manifest.json">
-    <link rel="stylesheet" href="./dist/style.7f27cd88.css">
+    <link rel="stylesheet" href="./dist/style.46fabf4d.css">
     <link rel="stylesheet" href="./dist/feed3.c02095c3.css">
 </head>
 
@@ -34,6 +34,16 @@
         </div>
         <h1>新規投稿</h1>
         <div class="next-text" onclick="share()">シェア</div>
+    </header>
+    <header class="header activity hide">
+        <h1>アクティビティ</h1>
+    </header>
+    <header class="header photo hide">
+        <div>
+            <div class="instagram-icon close"></div>
+        </div>
+        <h1>写真</h1>
+        <div class="next-text">シェア</div>
     </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
@@ -144,7 +154,7 @@
     </div>
     <div class="page-container feed-page3 hide">
         <div class="form-wrapper"> <img src="./dist/feed-main-image1.ab767e6b.png" class="feed-image active"> <textarea
-                type="text" placeholder="キャプションを書く" onclick="keyboardAnimation()"></textarea> </div>
+                type="text" placeholder="キャプションを書く" onkeydown="keyboardAnimation()"></textarea> </div>
         <div class="menu-warpper top-border">
             <div class="menu-warpper__text">タグ付けする</div>
             <div class="instagram-icon arrow-right"></div>
@@ -169,19 +179,55 @@
             <div class="menu-warpper__text">ミクシィ</div> <img src="./dist/toggle-button.95e3556a.png">
         </div>
         <div class="menu-warpper top-border">
-            <div class="menu-warpper__text detail">詳細設定 <div class="instagram-icon arrow-right"></div>
+            <div class="menu-warpper__text detail"> 詳細設定 <div class="instagram-icon arrow-right"></div>
             </div>
         </div>
+    </div>
+    <div class="page-container activity-page">
+        <div class="person-label"> new </div>
+        <div class="person-info" onclick="photo()"> <img class="person-info__image" src="./dist/story-0.073f3091.jpg" alt="">
+            <div class="person-info__content"> <span class="person-info__content__name"> isetanmens </span> <span
+                    class="person-info__content__name2"> さんがコメントしました。お買い上げありがとうございます。2着目以降はオンラインだけで購入できるので、ぜひご利用ください。
+                </span> </div> <img class="person-info__image2" src="./dist/feed-main-image1.ab767e6b.png" alt="">
+        </div>
+        <div class="person-label"> 今日 </div> <img src="./dist/activity.66cbb47d.png" class="main-image1">
+    </div>
+    <div class="page-container photo-page">
+        <div class="store-info"> <img src="./dist/story-0.073f3091.jpg" alt=""> <img src="./dist/feed-main-image1.ab767e6b.png"
+                class="share hide">
+            <div class="store-info__content">
+                <div class="store-info__content__name"> isetanmens </div>
+            </div>
+            <div class="instagram-icon ten-menu"></div>
+        </div> <img src="./dist/feed-main-image1.ab767e6b.png" class="main-image3">
+        <div class="image-slider-nav hide">
+            <div class="ten active"></div>
+            <div class="ten"></div>
+            <div class="ten"></div>
+        </div>
+        <div class="icons-warpper">
+            <div class="instagram-icon like"></div>
+            <div class="instagram-icon comment"></div>
+            <div class="instagram-icon message"></div>
+            <div class="instagram-icon share"></div>
+        </div>
+        <div class="like-text"> いいね！257件 </div>
+        <div class="date-text"> <span>isetanmens </span><span class="date"> 2017.6.21wed-7.11tue</span> </div>
+        <div class="store-info"> <img src="./dist/story-0.073f3091.jpg" alt=""> <img src="./dist/feed-main-image1.ab767e6b.png"
+                class="share hide">
+            <div class="store-info__content"> <span class="store-info__content__name"> isetanmens </span> <span
+                    class="store-info__content__name2"> お買い上げありがとうございます。2着目以降はオンラインだけで購入できるので、ぜひご利用ください。 </span> </div>
+        </div> <img src="./dist/photo-input.f4e49e6a.png" class="photo-input">
     </div>
     <footer class="footer">
         <div class="instagram-icon home active" onclick="home()"></div>
         <div class="instagram-icon search"></div>
         <div class="instagram-icon plus" onclick="writeFeed()"></div>
-        <div class="instagram-icon like fade" onclick="showTooltip()"> <img src="./dist/tooltip.11be2440.png"
+        <div class="instagram-icon like fade" onclick="showTooltip()"> <img src="./dist/hartTooltip.a0120ad7.png"
                 class="tooltip hide"> </div>
         <div class="instagram-icon person" onclick="brand()"></div>
     </footer>
-    <script src="./dist/javascripts.406ba41d.js"></script>
+    <script src="./dist/javascripts.c233fab5.js"></script>
     <script src="./dist/pwacompat.48bb83d7.js"></script>
     <script>var t = !!navigator.platform && /iPhone|iPod/.test(navigator.platform); t && document.querySelector('link[rel="manifest"]').setAttribute("rel", "no-on-ios"); var n = function () { var t = window.navigator.userAgent.toLowerCase(); return /iphone|ipad|ipod/.test(t) }, e = function () { return "standalone" in window.navigator && window.navigator.standalone }; function o(t, n) { window.location.href = t.href } n() && e(); for (var i = document.getElementsByTagName("a"), r = 0; r < i.length; r++)i[r].onclick = function () { return event.preventDefault(), window.location = this.getAttribute("href"), !1 }; !function (t, n, e) { if (e in n && n[e]) { var o, i = t.location, r = /^(a|html)$/i; t.addEventListener("click", function (t) { for (o = t.target; !r.test(o.nodeName);)o = o.parentNode; "href" in o && (o.href.indexOf("http") || ~o.href.indexOf(i.host)) && (t.preventDefault(), i.href = o.href) }, !1) } }(document, window.navigator, "standalone");</script>
 </body>
