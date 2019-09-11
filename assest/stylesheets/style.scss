@@ -17,6 +17,7 @@ body{
     width: 100vw;
     background: white;
     box-sizing: border-box;
+    z-index: 1;
     h1{
         color: #262626;
         font-size: 16px;
@@ -156,6 +157,20 @@ body{
         cursor: pointer;
     }
 }
+.instagram-icon3{
+    background-image: url(/assest/images/instagram-icon3.png);
+    
+    &.blue-plus{
+        width: 18px;
+        height: 18px;
+        background-size: 410px 396px;
+        background-position: -250px -254px;
+        cursor: pointer;
+        position: absolute;
+        margin-top: -17px;
+        right: 5px;
+    }
+}
 
 .stories-wrapper{
     display: flex;
@@ -174,17 +189,23 @@ body{
         align-items: center;
         padding: 0 4px;
     }
-    &__img__border{
+    &__img{
         padding: 2px;
-        border: 1px solid #ddd;
-        border-radius: 50%;
         overflow: hidden;
-        width: 60px;
-        height: 60px;
+        width: 62px;
+        height: 62px;
+        position: relative;
         img{
             width: 60px;
             height: 60px;
             border-radius: 50%;
+        }
+        &__border{
+            @extend .stories-wrapper__img;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
         }
     }
     &__name{
@@ -200,6 +221,7 @@ body{
     }
 }
 
+.write-feed,
 .store-info{
     padding: 10px 16px;
     border-bottom: 0.5px solid rgb(239, 239, 239);
@@ -210,6 +232,9 @@ body{
         width: 32px;
         height: 32px;
         border-radius: 50%;
+    }
+    &.share{
+        padding: 5px 16px;
     }
     &__content{
         padding: 0 0 0 15px;
@@ -226,10 +251,34 @@ body{
     }
 }
 
+.write-feed{
+    flex-direction: column;
+    .write-feed__wrapper{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        img{
+            border-radius: 0%;
+        }
+    }
+    &__text{
+        color: #b5b5b5;
+    }
+    .progress{
+        margin-top: 5px;
+        margin-right: auto;
+    }
+}
+
 .main-image1,
 .main-image2,
+.main-image3,
 .feed-main-image1{
     width: 100vw;
+}
+
+.loading{
+    opacity: 0.6;
 }
 
 .feed-float-icon{
@@ -378,3 +427,31 @@ a{
         }
     }
 }
+
+
+
+.progress {
+    background: rgba(255,255,255,0.1);
+    justify-content: flex-start;
+    border-radius: 100px;
+    align-items: center;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 5px;
+    z-index: 1;
+    margin-top: 5px;
+  }
+  
+  .progress-value {
+    animation: load 5s ease-out forwards;
+    box-shadow: 0 10px 5px -10px #fff;
+    background: rgb(79, 159, 252);
+    height: 3px;
+    width: 0;
+  }
+  
+  @keyframes load {
+    0% { width: 0; }
+    100% { width: 100%; }
+  }

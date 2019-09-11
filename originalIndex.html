@@ -32,13 +32,22 @@
           <div class="instagram-icon close"></div>
         </div>
         <h1>新規投稿</h1>
-        <div class="next-text">シェア</div>
+        <div class="next-text" onclick="share()">シェア</div>
     </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
           <div class="stories-wrapper__item">
+            <div class="stories-wrapper__img">
+                <img src="./assest/images/story-5.jpg"/>
+                <div class="instagram-icon3 blue-plus"></div>
+            </div>
+            <div class="stories-wrapper__name">
+                ストーリーズ
+            </div>
+          </div>
+          <div class="stories-wrapper__item">
             <div class="stories-wrapper__img__border">
-                <img src="./assest/images/story-0.jpg"/>
+                <img src="./assest/images/story-0.jpg" />
             </div>
             <div class="stories-wrapper__name">
                 isetanmens
@@ -77,8 +86,22 @@
             </div>
           </div>
         </div>
+        <div class="write-feed hide">
+          <div class="write-feed__wrapper">
+            <img src="./assest/images/feed-main-image1.png"/>
+            <div class="store-info__content">
+              <div class="write-feed__text">
+                  投稿しています。
+              </div>
+            </div>
+          </div>
+          <div class="progress">
+            <div class="progress-value"></div>
+          </div>
+        </div>
         <div class="store-info">
           <img src="./assest/images/story-0.jpg" alt="">
+          <img src="./assest/images/feed-main-image1.png" class="share hide"/>
           <div class="store-info__content">
             <div class="store-info__content__name">
                 isetanmens
@@ -91,6 +114,7 @@
         </div>
         <img src="./assest/images/main-image.jpg" class="main-image1">
         <img src="./assest/images/main-image2.jpg" class="main-image2 hide">
+        <img src="./assest/images/feed-main-image1.png" class="main-image3 loading hide">
         <div class="image-slider-nav hide">
           <div class="ten active"></div>
           <div class="ten"></div>

@@ -10,17 +10,26 @@ const feedPage1 = document.querySelector('.page-container.feed-page1');
 const feedPage2 = document.querySelector('.page-container.feed-page2');
 const feedPage3 = document.querySelector('.page-container.feed-page3');
 
-const mainImage1 = document.querySelector('.page-container.main-page .main-image1');
+const mainImage1 = document.querySelector('.main-image1');
 const mainImage2 = document.querySelector('.main-image2');
+const mainImage3 = document.querySelector('.main-image3');
 
 const imageSliderNav = document.querySelector('.image-slider-nav');
+const storeInfo = document.querySelector('.store-info');
+const contentUserName = document.querySelector('.store-info__content__name');
 const contentName = document.querySelector('.store-info__content__name2');
 const date = document.querySelector('.date-text .date');
 const contentText = document.querySelector('.content-text');
 const likeText = document.querySelector('.like-text');
 const feed3Textarea = feedPage3.querySelector('.form-wrapper textarea');
+const contentImage = document.querySelector('.store-info img');
+const contentImageShare = document.querySelector('.store-info img.share');
 
 const footer = document.querySelector('.footer');
+const progress = document.querySelector('.progress');
+const writeFeed = document.querySelector('.write-feed');
+const writeFeedText = document.querySelector('.write-feed__text');
+
 window.home = () => {
     location.reload();
 }
@@ -44,15 +53,14 @@ window.brand = () => {
 }
 
 window.writeFeed = () => {
-    if(mainPage.classList.contains('hide')){
-        return false;
-    }
+    console.log(feedPage1);
     homeHeader.classList.add('hide');
     feedHeader1.classList.remove('hide');
     mainPage.classList.add('hide');
     feedPage1.classList.remove('hide');
 
     footer.querySelector('.active').classList.remove('active');
+    document.body.scrollTop = 0;
 }
 
 window.moveFeed2 = () => {
@@ -89,4 +97,34 @@ window.keyboardAnimation = () => {
             }
         },100*index)
     }
+}
+
+window.share = () => {
+    feedPage3.classList.add('hide');
+    mainPage.classList.remove('hide');
+    feedHeader3.classList.add('hide');
+    homeHeader.classList.remove('hide');
+    contentName.classList.add('hide');
+    
+    contentImage.classList.add('hide');
+    contentImageShare.classList.remove('hide');
+    contentUserName.textContent = "user name";
+    footer.querySelector('.home').classList.add('active');
+    
+    storeInfo.classList.add('loading');
+    mainImage3.classList.add('loading');
+    
+    mainImage1.classList.add('hide');
+    mainImage2.classList.add('hide');
+    mainImage3.classList.remove('hide');
+    writeFeed.classList.remove('hide');
+    
+    setTimeout(function(){
+        date.textContent = ' 2019.9.24';
+        likeText.textContent = 'いいね！0件';
+        storeInfo.classList.remove('loading');
+        mainImage3.classList.remove('loading');
+        progress.classList.add('hide');
+        writeFeedText.textContent = "完了";
+    },5000);
 }
