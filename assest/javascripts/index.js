@@ -5,6 +5,7 @@ const feedHeader2 = document.querySelector('.header.feed2');
 const feedHeader3 = document.querySelector('.header.feed3');
 
 const activityHeader = document.querySelector('.header.activity');
+const photoHeader = document.querySelector('.header.photo');
 
 const mainPage = document.querySelector('.page-container.main-page');
 
@@ -13,6 +14,7 @@ const feedPage2 = document.querySelector('.page-container.feed-page2');
 const feedPage3 = document.querySelector('.page-container.feed-page3');
 
 const activityPage = document.querySelector('.page-container.activity-page');
+const photoPage = document.querySelector('.page-container.photo-page');
 
 const mainImage1 = document.querySelector('.main-image1');
 const mainImage2 = document.querySelector('.main-image2');
@@ -146,4 +148,13 @@ window.activity = () => {
     activityHeader.classList.remove('hide');
     mainPage.classList.add('hide');
     activityPage.classList.remove('hide');
+    document.querySelector('.tooltip').classList.add('hide');
+}
+
+window.photo = () => {
+    activityHeader.classList.add('hide');
+    activityPage.classList.add('hide');
+    photoHeader.classList.remove('hide');
+    photoPage.classList.remove('hide');
+    
 }

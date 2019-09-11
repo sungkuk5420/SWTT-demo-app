@@ -37,6 +37,13 @@
     <header class="header activity hide">
         <h1>アクティビティ</h1>
     </header>
+    <header class="header photo hide">
+        <div>
+          <div class="instagram-icon close"></div>
+        </div>
+        <h1>写真</h1>
+        <div class="next-text">シェア</div>
+    </header>
     <div class="page-container main-page">
         <div class="stories-wrapper">
           <div class="stories-wrapper__item">
@@ -241,11 +248,11 @@
       </div>
     </div>
     
-    <div class="page-container actifity-page">
+    <div class="page-container activity-page">
         <div class="person-label">
           new
         </div>
-        <div class="person-info">
+        <div class="person-info" onclick="photo()">
           <img class="person-info__image" src="./assest/images/story-0.jpg" alt="">
           <div class="person-info__content">
               <span class="person-info__content__name">
@@ -254,14 +261,58 @@
               <span class="person-info__content__name2">
                   さんがコメントしました。お買い上げありがとうございます。2着目以降はオンラインだけで購入できるので、ぜひご利用ください。
               </span>
-            </div>
-            <img class="person-info__image2" src="./assest/images/feed-main-image1.png" alt="">
+          </div>
+          <img class="person-info__image2" src="./assest/images/feed-main-image1.png" alt="">
         </div>
         
         <div class="person-label">
           今日
         </div>
         <img src="./assest/images/activity.png" class="main-image1">
+    </div>
+    <div class="page-container photo-page">
+        <div class="store-info">
+          <img src="./assest/images/story-0.jpg" alt="">
+          <img src="./assest/images/feed-main-image1.png" class="share hide"/>
+          <div class="store-info__content">
+            <div class="store-info__content__name">
+                isetanmens
+            </div>
+          </div>
+          <div class="instagram-icon ten-menu"></div>
+        </div>
+        <img src="./assest/images/feed-main-image1.png" class="main-image3">
+        <div class="image-slider-nav hide">
+          <div class="ten active"></div>
+          <div class="ten"></div>
+          <div class="ten"></div>
+        </div>
+        <div class="icons-warpper">
+          <div class="instagram-icon like"></div>
+          <div class="instagram-icon comment"></div>
+          <div class="instagram-icon message"></div>
+          <div class="instagram-icon share"></div>
+        </div>
+        <div class="like-text">
+            いいね！257件
+        </div>
+        <div class="date-text">
+            <span>isetanmens </span><span class="date"> 2017.6.21wed-7.11tue</span>
+        </div>
+        
+        <div class="store-info">
+          <img src="./assest/images/story-0.jpg" alt="">
+          <img src="./assest/images/feed-main-image1.png" class="share hide"/>
+          <div class="store-info__content">
+            <span class="store-info__content__name">
+                isetanmens
+            </span>
+            <span class="store-info__content__name2">
+                お買い上げありがとうございます。2着目以降はオンラインだけで購入できるので、ぜひご利用ください。
+            </span>
+          </div>
+        </div>
+        <img src="./assest/images/photo-input.png" class="photo-input">
     </div>
     <footer class="footer">
         <div class="instagram-icon home active" onclick="home()"></div>
