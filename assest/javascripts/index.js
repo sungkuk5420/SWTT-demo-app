@@ -128,3 +128,8 @@ window.share = () => {
         writeFeedText.textContent = "完了";
     },5000);
 }
+window.showTooltip = () =>{
+    if(event.target.classList.contains('like')){
+        event.target.querySelector('.tooltip').classList.toggle('hide');
+    }
+}

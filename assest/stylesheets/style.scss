@@ -91,6 +91,7 @@ body{
         height:24px;
         background-size: 362px 344px;
         background-position: -98px -295px;
+        position: relative;
         cursor: pointer;
     }
     &.comment{
@@ -454,4 +455,27 @@ a{
   @keyframes load {
     0% { width: 0; }
     100% { width: 100%; }
+  }
+  
+  .tooltip{
+      position: absolute;
+      width: 80px;
+      top: -49px;
+      left: -27px;
+      opacity: 1;
+      animation: fade 0.3s ease-out forwards;
+      &.hide{
+          opacity: 0;
+      }
+  }
+  
+  @keyframes fade {
+    0% { 
+        top: -40px;
+        opacity: 0; 
+    }
+    100% { 
+        top: -49px;
+        opacity: 1; 
+    }
   }
