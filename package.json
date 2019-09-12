@@ -4,7 +4,8 @@
   "description": "### parcel 追加 ``` npm install -g parcel-bundler ```",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel originalIndex.html"
+    "dev": "parcel originalIndex.html",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
