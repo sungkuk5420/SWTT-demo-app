@@ -55,3 +55,9 @@ npm i postcss-modules autoprefixer
 ```
 node-static
 ```
+
+### build
+
+```
+parcel build originalIndex.html
+```

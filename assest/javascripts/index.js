@@ -102,7 +102,7 @@ window.keyboardAnimation = () => {
             if(text.length-1 == index){
                 animationKey = false;
             }
-        },100*index)
+        },50*index)
     }
 }
 
